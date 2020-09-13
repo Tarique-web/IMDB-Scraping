@@ -1,6 +1,6 @@
 import json,pprint
-with open("movies_with_all_details.json","r+") as naik:
-	all_movies_list=json.load(naik)
+with open("movies_with_all_details.json","r+") as F:
+	all_movies_list=json.load(F)
 
 def analyse_movies_genre(all_movies_list):
 	genres_list=[]
