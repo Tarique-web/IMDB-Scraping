@@ -1,6 +1,6 @@
 import pprint,json,os
-with open("position_wise_movies.json","r+") as naik:
-	python_data=json.load(naik)
+with open("position_wise_movies.json","r+") as F:
+	python_data=json.load(F)
 
 def group_by_year(python_data):
 	year_wise_movies={}
