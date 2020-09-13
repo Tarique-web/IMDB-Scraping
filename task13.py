@@ -1,8 +1,8 @@
 import pprint,os,json,requests,string,time,random
 from bs4 import BeautifulSoup
 from copy_of_task12 import scrape_movie_cast
-with open("position_wise_movies.json","r+") as naik:
-	python_data=json.load(naik)
+with open("position_wise_movies.json","r+") as F:
+	python_data=json.load(F)
 # with open("movies_with_cast_details.json","r+") as f:
 # 	cast_data=json.load(f)
 
