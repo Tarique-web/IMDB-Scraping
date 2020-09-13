@@ -1,8 +1,8 @@
 from bs4 import BeautifulSoup
 import requests,json,pprint,os
 # movie_link="https://www.imdb.com/title/tt0066763/fullcredits?ref_=tt_cl_sm#cast"
-with open("movies_with_cast_details.json","r+") as naik:
-	python_data=json.load(naik)
+with open("movies_with_cast_details.json","r+") as F:
+	python_data=json.load(F)
 def for_moving_link(python_data):
 	for each_movie_link in python_data:
 		movie_link=each_movie_link['cast']
@@ -48,8 +48,8 @@ def scrape_movie_cast(movie_caste_url):
 	if os.path.exists(f"{naming_for_json}_cast.json"):
 		pass
 	else:
-		with open(f"{naming_for_json}_cast.json","w+") as naik:
-			json_data=json.dump(exact_dict,naik)
+		with open(f"{naming_for_json}_cast.json","w+") as F:
+			json_data=json.dump(exact_dict,F)
 
 	return exact_dict
 
