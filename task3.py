@@ -1,6 +1,6 @@
 import pprint,json,os
-with open("position_wise_movies.json","r+") as naik:
-	python_data=json.load(naik)
+with open("position_wise_movies.json","r+") as F:
+	python_data=json.load(F)
 
 list1=
 decade_wise_movies={1950:[],1960:[],1970:[],1980:[],1990:[],2000:[],2010:[],2020:[]}
@@ -44,6 +44,6 @@ python_string=group_by_decade(python_data)
 if os.path.exists("group_by_decade.json"):
 	pass
 else:
-	with open("group_by_decade.json","w+") as naik:
-		json_data=json.dump(python_string,naik,indent=2)
+	with open("group_by_decade.json","w+") as F:
+		json_data=json.dump(python_string,F,indent=2)
 pprint.pprint(group_by_decade(python_data))
